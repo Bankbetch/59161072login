@@ -30,7 +30,7 @@
         <div class="field">
           <label class="label">UserName</label>
           <div class="control">
-            <input class="input" type="text" placeholder="" id="userid">
+            <input class="input" type="text" placeholder="" id="user">
           </div>
         </div>
 
@@ -53,19 +53,19 @@
             </label>
           </div>
         </div>
-        <a class="button is-success is-fullwidth " onclick="check(userid,pwd,ab)">Login</a>
+        <a class="button is-success is-fullwidth " onclick="check(user,pwd,ab)">Login</a>
       </div>
     </form>
   </section>
 
   <script>
     var a = Math.floor(100000 + Math.random() * 900000)
-    function check(userid, pwd, ab) {
+    function check(user, pwd, ab) {
 
-      if (userid.value == "admin" && pwd.value == "1234" && ab.value == a) {
+      if (user.value == "admin" && pwd.value == "1234" && ab.value == a) {
         parent.location.href = "logins.html"
         return true;
-      } else if (userid.value != "admin" && pwd.value != "1234" && ab.value != a) {
+      } else if (user.value != "admin" && pwd.value != "1234" && ab.value != a) {
         alert("Username or Password is wrong.")
         alert("AutoBot is not match.")
       } else if (ab.value != a) {
